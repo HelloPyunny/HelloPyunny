@@ -1,3 +1,8 @@
 export default function Skills() {
-  return <div>Skills</div>;
+  return (
+    <div>
+      <h1>Skills</h1>
+      <p>Coming soon...</p>
+    </div>
+  );
 } 
