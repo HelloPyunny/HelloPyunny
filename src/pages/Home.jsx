@@ -72,7 +72,7 @@ export default function Home() {
         <TypeAnimation
           sequence={[
             'print("Hello world")',
-            2000,
+            300,
             'print("Hello Pyunny")',
             2000,
           ]}
