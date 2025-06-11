@@ -4,8 +4,9 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/',
+  base: '/hellopyunny.github.io/',
   build: {
+    outDir: 'build',
     rollupOptions: {
       output: {
         manualChunks: undefined
