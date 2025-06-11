@@ -7,6 +7,7 @@ import Experience from "./pages/Experience";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
 import Playground from "./pages/Playground";
+import { Analytics } from "@vercel/analytics/react"
 
 function AppContent() {
   const location = useLocation();
@@ -14,6 +15,7 @@ function AppContent() {
 
   return (
     <>
+      <Analytics />
       {!isHome && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
