@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
-import project1Image from "../assets/project1.png";
+//import project1Image from "../assets/project1.png";
 
 const Container = styled.div`
   min-height: 100vh;
@@ -143,7 +143,7 @@ const projects = [
     role: "Full Stack Developer",
     short: "A website for Mad-K, a Korean Soccer team in UW-Madison",
     detail: "I am currently working on the website for Mad-K, a Korean Soccer team in UW-Madison.",
-    image: project1Image,
+    //image: project1Image,
     stacks: ["React", "TypeScript", "Styled-Components"],
   },
   {
@@ -153,7 +153,7 @@ const projects = [
     short: "A Progressive Web Application that splits the cost of a shopping trip through AI",
     detail: "ShoppingSplitter is a smart expense management Progressive Web Application designed for multiple users,"
      + "\nfeaturing receipt scanning with Tesseract.js and OpenAI, and an intuitive interface built with Material-UI.",
-    image: "/assets/project2.png",
+    //image: "/assets/project2.png",
     stacks: ["React", "TypeScript", "OpenAI API", "Data Visualization", "Workbox"],
   },
   {
@@ -162,7 +162,7 @@ const projects = [
     role: "Team Lead & Full Stack Developer",
     short: "A web application that generates the optimal football formations through Machine Learning",
     detail: "Detailed description",
-    image: "/assets/project3.png",
+    //image: "/assets/project3.png",
     stacks: ["React", "Python", "FastAPI", "scikit-learn", "Machine Learning", "SQLite3"],
   },
   {
@@ -171,7 +171,7 @@ const projects = [
     role: "Team Lead & Software Developer",
     short: "An autonomous vehicle with a single camera based road detection",
     detail: "Detailed description",
-    image: "/assets/project4.png",
+    //image: "/assets/project4.png",
     stacks: ["Python", "OpenCV", "Computer Vision", "Raspberry Pi"],
   },
   {
@@ -180,7 +180,7 @@ const projects = [
     role: "Frontend Developer",
     short: "A web application that predicts the outcome of the English Premier League",
     detail: "Detailed description",
-    image: "/assets/project5.png",
+    //image: "/assets/project5.png",
     stacks: ["TypeScript", "React", "Python", "FastAPI", "Web Scraping"],
   },
 ];
