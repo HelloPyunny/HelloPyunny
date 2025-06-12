@@ -17,6 +17,7 @@ const Title = styled.h2`
   margin-bottom: 32px;
   font-family: 'Fira Mono', monospace;
   color: #222;
+  text-align: center;
 `;
 
 const CardList = styled.div`
@@ -248,7 +249,7 @@ const projects = [
   },
   {
     name: "Keyboard Writer",
-    periodOrPersonal: "2024 Personal Project",
+    periodOrPersonal: "Personal Project",
     role: "Full Stack Developer",
     short: "A desktop launcher app that automatically types your input text into any document, simulating human typing.",
     detail: "<strong>Project Overview:</strong>\n" +
