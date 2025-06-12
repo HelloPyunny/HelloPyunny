@@ -85,10 +85,11 @@ export default function Home() {
       <SubText>Welcome to my personal website</SubText>
       <NavLinks>
         <NavButton href="/education">Education</NavButton>
-        <NavButton href="/interests">Interests</NavButton>
         <NavButton href="/projects">Projects</NavButton>
         <NavButton href="/experience">Experience</NavButton>
         <NavButton href="/skills">Skills</NavButton>
+        <NavButton href="/interests">Interests</NavButton>
+        <NavButton href="/travel">Travel</NavButton>
         <NavButton href="/playground">Playground</NavButton>
       </NavLinks>
       <SocialLinks>

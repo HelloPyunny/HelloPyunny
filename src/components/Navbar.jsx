@@ -28,10 +28,11 @@ export default function Navbar() {
       <NavLinks>
         <Link to="/">Home</Link>
         <Link to="/education">Education</Link>
-        <Link to="/interests">Interests</Link>
         <Link to="/projects">Projects</Link>
         <Link to="/experience">Experience</Link>
         <Link to="/skills">Skills</Link>
+        <Link to="/interests">Interests</Link>
+        <Link to="/travel">Travel</Link>
         <Link to="/playground">Playground</Link>
       </NavLinks>
       <Contact>
