@@ -3,6 +3,7 @@ import { FaStar, FaMapMarkerAlt } from "react-icons/fa";
 import uwoLogo from "../assets/uwo.png";
 import uwmadisonLogo from "../assets/uwmadisonLogo.png";
 import sailLogo from "../assets/SailLogo.png";
+import rokaLogo from "../assets/rokaLogo.svg";
 
 const Container = styled.div`
   min-height: 100vh;
@@ -13,7 +14,7 @@ const Container = styled.div`
   align-items: center;
 `;
 
-const ContentWrapper = styled.div`
+const ContentWrapper = styled.div`  
   width: 100%;
   max-width: 1200px;
   padding: 0 20px;
@@ -156,6 +157,19 @@ const experiences = [
             "<li>Helped students understand and solve accounting problems.</li>" +
             "</ul>",
     skills: ["Accounting","Tutoring", "Leadership", "Communication", "Teamwork", "Problem Solving", "Time Management"]
+  },
+
+  {
+    logo: rokaLogo,
+    position: "Sergeant Squad Leader, South Sea Coast Guard",
+    company: "Republic of Korea Army",
+    period: "2020.04 ~ 2021.10",
+    location: "Yeosu, South Korea",
+    desc: "<ul>" + 
+            "<li>Served as a Sergeant Squad Leader in the South Sea Coast Guard.</li>" +
+            "<li>Successfully commanded and managed the squad after completing the 10 days of leadership training.</li>" +
+            "</ul>",
+    skills: ["Leadership", "Communication", "Teamwork", "Problem Solving", "Time Management", "Adaptability"]
   },
 ];
 
