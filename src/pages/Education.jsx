@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import uwmadisonLogo from "../assets/uwmadisonLogo.png";
+import uwoLogo from "../assets/uwo.png";
 
 const Container = styled.div`
   min-height: 100vh;
@@ -47,8 +49,30 @@ const Title = styled.h2`
   color: #222;
 `;
 
-const Item = styled.div`
-  margin-bottom: 18px;
+const SchoolItem = styled.div`
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 24px;
+`;
+
+const Logo = styled.div`
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  background: #e3eaff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  flex-shrink: 0;
+`;
+
+const LogoImg = styled.img`
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #fff;
 `;
 
 const ItemTitle = styled.h3`
@@ -68,6 +92,21 @@ const ItemDesc = styled.p`
   color: #333;
   margin-top: 0.5rem;
 `;
+
+const schools = [
+  {
+    logo: uwmadisonLogo,
+    name: "University of Wisconsin-Madison",
+    period: "2023.09 ~ 2026.05 (Expected) | Bachelor's Degree",
+    desc: "B.S. in Computer Science, Certificate in Statistics"
+  },
+  {
+    logo: uwoLogo,
+    name: "University of Wisconsin-Oshkosh",
+    period: "2022.01 ~ 2023.05 | Transferred",
+    desc: ""
+  }
+];
 
 const CourseworkSection = styled.section`
   width: 100%;
@@ -122,30 +161,29 @@ export default function Education() {
         <CardsRow>
           <Section>
             <Title>Education</Title>
-            <Item>
-              <ItemTitle>University of Wisconsin-Madison</ItemTitle>
-              <ItemSub>2023.09 ~ 2026.05 (Expected) | Bachelor's Degree</ItemSub>
-              <ItemDesc>B.S. in Computer Science, Certificate in Statistics</ItemDesc>
-            </Item>
-            <Item>
-              <ItemTitle>University of Wisconsin-Oshkosh</ItemTitle>
-              <ItemSub>2022.01 ~ 2023.05 | Transferred</ItemSub>
-            </Item>
+            {schools.map((school, idx) => (
+              <SchoolItem key={idx}>
+                <Logo>
+                  <LogoImg src={school.logo} alt={school.name + ' logo'} />
+                </Logo>
+                <div>
+                  <ItemTitle>{school.name}</ItemTitle>
+                  <ItemSub>{school.period}</ItemSub>
+                  {school.desc && <ItemDesc>{school.desc}</ItemDesc>}
+                </div>
+              </SchoolItem>
+            ))}
           </Section>
 
           <Section>
             <Title>Extracurricular Activities</Title>
-            <Item>
-              <ItemTitle>KUSA (Korean Undergraduate Student Association)</ItemTitle>
-              <ItemSub>2025.01 ~ Present | Operation Board Member</ItemSub>
-              <ItemDesc>Led the planning and executing large-scale cultural, social, and networking events, fostering a strong
-              sense of community among Korean students.</ItemDesc>
-            </Item>
-            <Item>
-              <ItemTitle>KCU (Korean Undergraduate Computer Science Union)</ItemTitle>
-              <ItemSub>2024.09 ~ Present | Team Project Leader</ItemSub>
-              <ItemDesc>Participated as a team leader of 4 students for two semesters and led the team to win the 2nd place in 2024 Fall semester.</ItemDesc>
-            </Item>
+            <ItemTitle>KUSA (Korean Undergraduate Student Association)</ItemTitle>
+            <ItemSub>2025.01 ~ Present | Operation Board Member</ItemSub>
+            <ItemDesc>Led the planning and executing large-scale cultural, social, and networking events, fostering a strong
+            sense of community among Korean students.</ItemDesc>
+            <ItemTitle>KCU (Korean Undergraduate Computer Science Union)</ItemTitle>
+            <ItemSub>2024.09 ~ Present | Team Project Leader</ItemSub>
+            <ItemDesc>Participated as a team leader of 4 students for two semesters and led the team to win the 2nd place in 2024 Fall semester.</ItemDesc>
           </Section>
         </CardsRow>
 
