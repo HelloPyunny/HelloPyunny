@@ -106,9 +106,14 @@ export default function Skills() {
       { name: "FastAPI", level: 75 },
     ],
     "Libraries": [
-      { name: "OpenCV", level: 85 },
+      { name: "OpenCV", level: 80 },
       { name: "scikit-learn", level: 80 },
-      {}
+      { name: "PyTorch", level: 70 },
+      { name: "TensorFlow", level: 70 },
+      { name: "Matlab", level: 75 },
+      { name: "Pandas", level: 75 },
+      { name: "NumPy", level: 75 },
+      { name: "SciPy", level: 75 },
     ],
     "Database": [
       { name: "SQL", level: 75 },
@@ -123,20 +128,27 @@ export default function Skills() {
   };
 
   const softSkills = {
+    "Language": [
+      { name: "Korean", level: 100 },
+      { name: "English", level: 90 },
+    ],
     "Communication": [
-      { name: "Team Leadership", level: 85 },
-      { name: "Technical Writing", level: 80 },
-      { name: "Presentation", level: 85 },
+      { name: "Team Leadership", level: 95 },
+      { name: "Presentation", level: 90 },
     ],
     "Problem Solving": [
       { name: "Critical Thinking", level: 90 },
       { name: "Algorithm Design", level: 85 },
       { name: "Debugging", level: 85 },
+      { name: "Data Analysis", level: 80 },
+      { name: "Data Visualization", level: 80 },
+      { name: "Data Cleaning", level: 80 },
     ],
     "Project Management": [
       { name: "Agile Methodology", level: 80 },
-      { name: "Time Management", level: 85 },
+      { name: "Time Management", level: 95 },
       { name: "Task Prioritization", level: 85 },
+      { name: "Project Planning", level: 90 },
     ],
   };
 
