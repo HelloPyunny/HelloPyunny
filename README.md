@@ -1,4 +1,4 @@
-# Pyunny-site
+# Personal Website
 
 Personal portfolio and blog website.
 
