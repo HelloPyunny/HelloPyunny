@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const Container = styled.div`
   min-height: 100vh;
   background: #f5f8ff;
-  padding: 10px 0;
+  padding: 48px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,10 +53,26 @@ const ProjectPeriodAndRole = styled.div`
   margin-bottom: 8px;
 `;
 
-const ProjectDesc = styled.p`
+const ProjectDesc = styled.div`
   font-size: 1rem;
   color: #333;
   white-space: pre-line;
+  line-height: 1.6;
+
+  ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-top: 8px;
+  }
+
+  li {
+    margin-bottom: 4px;
+  }
+
+  strong {
+    font-weight: 600;
+    color: #222;
+  }
 `;
 
 const ModalOverlay = styled(motion.div)`
@@ -136,6 +152,17 @@ const ComingSoonContent = styled.div`
   font-family: 'Fira Mono', monospace;
 `;
 
+const ProjectLink = styled.a`
+  display: inline-block;
+  margin-top: 16px;
+  color: #4f8cff;
+  text-decoration: none;
+  font-weight: 500;
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 const projects = [
   {
     name: "Mad-K Website (Currently Working)",
@@ -143,45 +170,81 @@ const projects = [
     role: "Full Stack Developer",
     short: "A website for Mad-K, a Korean Soccer team in UW-Madison",
     detail: "I am currently working on the website for Mad-K, a Korean Soccer team in UW-Madison.",
+    //link: "/projects/mad-k",
     //image: project1Image,
     stacks: ["React", "TypeScript", "Styled-Components"],
   },
   {
     name: "Shop Splitter",
-    period: "2025.05 ~ 2025.07",
+    period: "Personal Project",
     role: "Full Stack Developer",
     short: "A Progressive Web Application that splits the cost of a shopping trip through AI",
-    detail: "ShoppingSplitter is a smart expense management Progressive Web Application designed for multiple users,"
-     + "\nfeaturing receipt scanning with Tesseract.js and OpenAI, and an intuitive interface built with Material-UI.",
+    detail: "ShoppingSplitter is a smart expense management Progressive Web Application designed for multiple users.\n\n" +
+            "<strong>Key Features:</strong>\n" +
+            "<ul>" +
+            "<li>Receipt scanning with Tesseract.js and OpenAI API</li>" +
+            "<li>Intuitive interface built with Material-UI</li>" +
+            "<li>Real-time cost splitting calculations</li>" +
+            "<li>Auto category classification with OpenAI API</li>" +
+            "<li>Real-time Exchange Rate API (KRW to USD) with a mini calculator</li>" +
+            "<li>Language Support (English, Korean)</li>" +
+            "<li>Data Visualization with Chart.js</li>" +
+            "</ul>",
+    link: "https://shop-splitter.vercel.app/",
     //image: "/assets/project2.png",
-    stacks: ["React", "TypeScript", "OpenAI API", "Data Visualization", "Workbox"],
+    stacks: ["React", "TypeScript", "Material-UI", "OCR","OpenAI API", "Data Visualization", "Workbox"],
   },
   {
-    name: "Football AI Generator",
+    name: "Football AI Generator (KCU 25SP Project)",
     period: "2025.01 ~ 2025.05",
     role: "Team Lead & Full Stack Developer",
     short: "A web application that generates the optimal football formations through Machine Learning",
-    detail: "Detailed description",
+    detail: "<strong>Project Overview:</strong>\n" +
+            "An innovative web application that leverages machine learning to generate optimal football formations.\n\n" +
+            "<strong>Key Features:</strong>\n" +
+            "<ul>" +
+            "<li>ML-based formation optimization with scikit-learn</li>" +
+            "<li>Generates user's own stats based in FC25 data</li>" +
+            "<li>Generates optimal formation with any selected 11 players</li>" +
+            "<li>This projects has it's own optimal formation algorithm</li>" +
+            "</ul>",
+    link: "https://github.com/HelloPyunny/Football-AI-Generator",
     //image: "/assets/project3.png",
-    stacks: ["React", "Python", "FastAPI", "scikit-learn", "Machine Learning", "SQLite3"],
+    stacks: ["React", "Python", "FastAPI", "scikit-learn", "Machine Learning", "SQLite3", "Algorithm"],
   },
   {
-    name: "MESLA",
+    name: "MESLA (KCU 24FA Project 2nd Place)",
     period: "2024.09 ~ 2024.12",
-    role: "Team Lead & Software Developer",
+    role: "2nd Place | Team Lead & Software Developer",
     short: "An autonomous vehicle with a single camera based road detection",
-    detail: "Detailed description",
+    detail: "<strong>Project Overview:</strong>\n" +
+            "An autonomous vehicle system utilizing computer vision for road detection with a single camera setup.\n\n" +
+            "<strong>Key Features:</strong>\n" +
+            "<ul>" +
+            "<li>Real-time road detection using OpenCV with a single camera calculating pixel values</li>" +
+            "<li>Raspberry Pi-based control system</li>" +
+            "<li>Integrated curvature computation algorithm with motor control system to enable real-time wheel steering based on calculated values.</li>" +
+            "</ul>",
+    link: "hthttps://www.youtube.com/shorts/aSJCM3PXX10",
     //image: "/assets/project4.png",
     stacks: ["Python", "OpenCV", "Computer Vision", "Raspberry Pi"],
   },
   {
     name: "EPL Predictor",
-    period: "2024 MadHack (Hackathon)",
+    period: "2024 Dotdata (Hackathon)",
     role: "Frontend Developer",
     short: "A web application that predicts the outcome of the English Premier League",
-    detail: "Detailed description",
+    detail: "<strong>Project Overview:</strong>\n" +
+            "English Premier League Analyst: Fast and accurate EPL predictions with a simple but intuitive UI.\n\n" +
+            "<strong>Key Features:</strong>\n" +
+            "<ul>" +
+            "<li>Predict upcoming matches</li>" +
+            "<li>Compare your own matchups</li>" +
+            "<li>Real-time data analysis</li>" +
+            "</ul>",
+    link: "https://devpost.com/software/english-premier-league-analyst",
     //image: "/assets/project5.png",
-    stacks: ["TypeScript", "React", "Python", "FastAPI", "Web Scraping"],
+    stacks: ["node.js", "Tailwind CSS", "Python", "Prisma", "Web Scraping"],
   },
 ];
 
@@ -246,12 +309,17 @@ export default function Projects() {
               {selected.image && <ProjectImage src={selected.image} alt={selected.name} />}
               <ProjectName>{selected.name}</ProjectName>
               <ProjectPeriodAndRole>{selected.role} | {selected.period}</ProjectPeriodAndRole>
-              <ProjectDesc>{selected.detail}</ProjectDesc>
+              <ProjectDesc dangerouslySetInnerHTML={{ __html: selected.detail }} />
               <StackList>
                 {selected.stacks && selected.stacks.map((stack, idx) => (
                   <StackTag key={idx}>{stack}</StackTag>
                 ))}
               </StackList>
+              {selected.link && (
+                <ProjectLink href={selected.link} target="_blank" rel="noopener noreferrer">
+                  Project Link →
+                </ProjectLink>
+              )}
             </ModalContent>
           </ModalOverlay>
         )}
@@ -266,7 +334,7 @@ export default function Projects() {
             onClick={() => setShowComingSoon(false)}
           >
             <ComingSoonContent>
-              Coming soon!
+              <strong>🔒 Coming soon!</strong>
             </ComingSoonContent>
           </ComingSoonModal>
         )}
