@@ -166,7 +166,7 @@ const ProjectLink = styled.a`
 const projects = [
   {
     name: "Mad-K Website (Currently Working)",
-    period: "2025.06 ~ Present",
+    periodOrPersonal: "2025.06 ~ Present",
     role: "Full Stack Developer",
     short: "A website for Mad-K, a Korean Soccer team in UW-Madison",
     detail: "I am currently working on the website for Mad-K, a Korean Soccer team in UW-Madison.",
@@ -176,7 +176,7 @@ const projects = [
   },
   {
     name: "Shop Splitter",
-    period: "Personal Project",
+    periodOrPersonal: "Personal Project",
     role: "Full Stack Developer",
     short: "A Progressive Web Application that splits the cost of a shopping trip through AI",
     detail: "ShoppingSplitter is a smart expense management Progressive Web Application designed for multiple users.\n\n" +
@@ -196,7 +196,7 @@ const projects = [
   },
   {
     name: "Football AI Generator (KCU 25SP Project)",
-    period: "2025.01 ~ 2025.05",
+    periodOrPersonal: "2025.01 ~ 2025.05",
     role: "Team Lead & Full Stack Developer",
     short: "A web application that generates the optimal football formations through Machine Learning",
     detail: "<strong>Project Overview:</strong>\n" +
@@ -214,7 +214,7 @@ const projects = [
   },
   {
     name: "MESLA (KCU 24FA Project 2nd Place)",
-    period: "2024.09 ~ 2024.12",
+    periodOrPersonal: "2024.09 ~ 2024.12",
     role: "2nd Place | Team Lead & Software Developer",
     short: "An autonomous vehicle with a single camera based road detection",
     detail: "<strong>Project Overview:</strong>\n" +
@@ -231,7 +231,7 @@ const projects = [
   },
   {
     name: "EPL Predictor",
-    period: "2024 Dotdata (Hackathon)",
+    periodOrPersonal: "Personal Project",
     role: "Frontend Developer",
     short: "A web application that predicts the outcome of the English Premier League",
     detail: "<strong>Project Overview:</strong>\n" +
@@ -246,6 +246,26 @@ const projects = [
     //image: "/assets/project5.png",
     stacks: ["node.js", "Tailwind CSS", "Python", "Prisma", "Web Scraping"],
   },
+  {
+    name: "Keyboard Writer",
+    periodOrPersonal: "2024 Personal Project",
+    role: "Full Stack Developer",
+    short: "A desktop launcher app that automatically types your input text into any document, simulating human typing.",
+    detail: "<strong>Project Overview:</strong>\n" +
+            "Keyboard Writer is a simple yet powerful desktop tool that simulates human typing by automatically entering your text into any document window. It features a user-friendly GUI launcher for easy control of typing speed and text input." 
+            + "\n(Easily bypasses detection tools that flag copy-pasted content by typing manually like a human)\n\n" +
+            "<strong>Key Features:</strong>\n" +
+            "<ul>" +
+            "<li>Launcher-style GUI for easy use</li>" +
+            "<li>Customizable typing speed (min/max delay)</li>" +
+            "<li>Simulates real keyboard input using pyautogui</li>" +
+            "<li>Supports multi-line text input</li>" +
+            "<li>macOS ready (with Accessibility permission guidance)</li>" +
+            "</ul>",
+    link: "https://github.com/HelloPyunny/keyboardWriter",
+    // image: "/assets/keyboardwriter.png",
+    stacks: ["Python", "tkinter", "pyautogui", "shell"]
+  }
 ];
 
 export default function Projects() {
@@ -280,7 +300,7 @@ export default function Projects() {
               }}></span>
             )}
             <ProjectName>{p.name}</ProjectName>
-            <ProjectPeriodAndRole>{p.role} | {p.period}</ProjectPeriodAndRole>
+            <ProjectPeriodAndRole>{p.role} | {p.periodOrPersonal}</ProjectPeriodAndRole>
             <ProjectDesc>{p.short}</ProjectDesc>
             <StackList>
               {p.stacks && p.stacks.map((stack, idx) => (
@@ -308,7 +328,7 @@ export default function Projects() {
               <CloseBtn onClick={() => setSelected(null)}>&times;</CloseBtn>
               {selected.image && <ProjectImage src={selected.image} alt={selected.name} />}
               <ProjectName>{selected.name}</ProjectName>
-              <ProjectPeriodAndRole>{selected.role} | {selected.period}</ProjectPeriodAndRole>
+              <ProjectPeriodAndRole>{selected.role} | {selected.periodOrPersonal}</ProjectPeriodAndRole>
               <ProjectDesc dangerouslySetInnerHTML={{ __html: selected.detail }} />
               <StackList>
                 {selected.stacks && selected.stacks.map((stack, idx) => (
