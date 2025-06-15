@@ -193,9 +193,9 @@ const projects = [
             "</ul>",
     link: "https://shop-splitter.vercel.app/",
     //image: "/assets/project2.png",
-    stacks: ["React", "TypeScript", "Material-UI", "OCR","OpenAI API", "Data Visualization", "Workbox"],
+    stacks: ["React", "TypeScript", "Prompt Engineering", "OCR","OpenAI API", "Data Visualization", "Workbox"],
   },
-  {
+  {  
     name: "Football AI Generator (KCU 25SP Project)",
     periodOrPersonal: "2025.01 ~ 2025.05",
     role: "Team Lead & Full Stack Developer",
