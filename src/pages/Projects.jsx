@@ -226,7 +226,7 @@ const projects = [
             "<li>Raspberry Pi-based control system</li>" +
             "<li>Integrated curvature computation algorithm with motor control system to enable real-time wheel steering based on calculated values.</li>" +
             "</ul>",
-    link: "hthttps://www.youtube.com/shorts/aSJCM3PXX10",
+    link: "https://www.youtube.com/shorts/aSJCM3PXX10",
     //image: "/assets/project4.png",
     stacks: ["Python", "OpenCV", "Computer Vision", "Raspberry Pi"],
   },
