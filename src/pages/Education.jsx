@@ -98,14 +98,14 @@ const schools = [
     logo: uwmadisonLogo,
     name: "University of Wisconsin-Madison",
     period: "2023.09 ~ 2026.05 (Expected) | Bachelor's Degree",
-    desc: "B.S. in Computer Science, Certificate in Statistics"
+    desc: "B.S. in Computer Science, Certificate in Statistics",
   },
   {
     logo: uwoLogo,
     name: "University of Wisconsin-Oshkosh",
     period: "2022.01 ~ 2023.05 | Transferred",
-    desc: ""
-  }
+    desc: "",
+  },
 ];
 
 const CourseworkSection = styled.section`
@@ -164,7 +164,7 @@ export default function Education() {
             {schools.map((school, idx) => (
               <SchoolItem key={idx}>
                 <Logo>
-                  <LogoImg src={school.logo} alt={school.name + ' logo'} />
+                  <LogoImg src={school.logo} alt={school.name + " logo"} />
                 </Logo>
                 <div>
                   <ItemTitle>{school.name}</ItemTitle>
@@ -177,13 +177,26 @@ export default function Education() {
 
           <Section>
             <Title>Extracurricular Activities</Title>
+            <ItemTitle>Mad K (Wisconsin Madison Korean Soccer Team)</ItemTitle>
+            <ItemSub>2025.06 ~ Present | President</ItemSub>
+            <ItemDesc>
+              Led a 50+ member student soccer club; organized weekly training sessions and managed
+              scheduling, budgeting, and club communications.
+            </ItemDesc>
+            <br />
             <ItemTitle>KUSA (Korean Undergraduate Student Association)</ItemTitle>
             <ItemSub>2025.01 ~ Present | Operation Board Member</ItemSub>
-            <ItemDesc>Led the planning and executing large-scale cultural, social, and networking events, fostering a strong
-            sense of community among Korean students.</ItemDesc>
+            <ItemDesc>
+              Led the planning and executing large-scale cultural, social, and networking events,
+              fostering a strong sense of community among Korean students.
+            </ItemDesc>
+            <br />
             <ItemTitle>KCU (Korean Undergraduate Computer Science Union)</ItemTitle>
             <ItemSub>2024.09 ~ Present | Team Project Leader</ItemSub>
-            <ItemDesc>Participated as a team leader of 4 students for two semesters and led the team to win the 2nd place in 2024 Fall semester.</ItemDesc>
+            <ItemDesc>
+              Participated as a team leader of 4 students for two semesters and led the team to win
+              the 2nd place in 2024 Fall semester.
+            </ItemDesc>
           </Section>
         </CardsRow>
 
