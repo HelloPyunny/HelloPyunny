@@ -14,17 +14,17 @@ const Container = styled.div`
   align-items: center;
 `;
 
-const ContentWrapper = styled.div`  
+const ContentWrapper = styled.div`
   width: 100%;
   max-width: 1200px;
   padding: 0 20px;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 `;
 
 const Title = styled.h2`
   font-size: 2rem;
   margin-bottom: 32px;
-  font-family: 'Fira Mono', monospace;
+  font-family: "Fira Mono", monospace;
   color: #222;
   text-align: center;
 `;
@@ -38,7 +38,7 @@ const CardList = styled.div`
 const Card = styled.div`
   background: #fff;
   border-radius: 18px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   padding: 32px 28px;
   display: flex;
   gap: 24px;
@@ -61,10 +61,10 @@ const Logo = styled.div`
 const LogoImg = styled.img`
   width: 80px;
   height: 80px;
-  object-fit: contain;   
+  object-fit: contain;
   border-radius: 12px;
   background: #fff;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
 `;
 
 const Info = styled.div`
@@ -117,22 +117,33 @@ const SkillTag = styled.div`
   font-size: 0.9rem;
   padding: 4px 12px;
   border-radius: 8px;
-  font-family: 'Fira Mono', monospace;
+  font-family: "Fira Mono", monospace;
   font-weight: 500;
 `;
 
 const experiences = [
   {
     logo: sailLogo,
-    position: "Incoming Intern",
+    position: "Software Engineering Intern",
     company: "Wisconsin Summer of AI Laboratory (SAIL)",
     period: "2025.06 ~ 2025.08",
     location: "Madison, WI",
-    //desc: "<ul>" + 
-            //"<li>...</li>" +
-            //"<li>...</li>" +
-          //"</ul>",
-    skills: ["AI"]
+    desc:
+      "<ul>" +
+      "<li>Funded by OpenAI, developed an AI-powered, user-personalized RPG by utilizing OpenAI APIs and Pinecone Vector Database for dynamic, context-aware gameplay.</li>" +
+      "<li>Implemented real-time NPC interactions by integrating conversational AI and embedding player intent for adaptive gameplay.</li>" +
+      "<li>Leveraged generative image models to create real-time, user-tailored maps on demand, storing them in AWS for scalable access, while maintaining gameplay continuity via contextual embeddings.</li>" +
+      "</ul>",
+    skills: [
+      "AI",
+      "Conversational AI",
+      "Generative Image Models",
+      "AWS",
+      "Pinecone Vector Database",
+      "OpenAI API",
+      "Godot Engine",
+      "Python",
+    ],
   },
   {
     logo: uwoLogo,
@@ -140,11 +151,19 @@ const experiences = [
     company: "University of Wisconsin-Oshkosh",
     period: "2022.09 ~ 2023.05",
     location: "Oshkosh, WI",
-    desc: "<ul>" + 
-            "<li>Tutored students in math.</li>" +
-            "<li>Helped students understand and solve math problems.</li>" +
-            "</ul>",
-    skills: ["Math","Tutoring", "Leadership", "Communication", "Teamwork", "Problem Solving", "Time Management"]
+    desc:
+      "<ul>" +
+      "<li>Tutored college-level math, enhancing communication and problem-solving skills in a collaborative, fast-paced environment.</li>" +
+      "</ul>",
+    skills: [
+      "Math",
+      "Tutoring",
+      "Leadership",
+      "Communication",
+      "Teamwork",
+      "Problem Solving",
+      "Time Management",
+    ],
   },
   {
     logo: uwoLogo,
@@ -152,11 +171,19 @@ const experiences = [
     company: "University of Wisconsin-Oshkosh",
     period: "2023.01 ~ 2023.05",
     location: "Oshkosh, WI",
-    desc: "<ul>" + 
-            "<li>Tutored students in accounting.</li>" +
-            "<li>Helped students understand and solve accounting problems.</li>" +
-            "</ul>",
-    skills: ["Accounting","Tutoring", "Leadership", "Communication", "Teamwork", "Problem Solving", "Time Management"]
+    desc:
+      "<ul>" +
+      "<li>Tutored students in accounting, enhancing communication and problem-solving skills in a collaborative, fast-paced environment.</li>" +
+      "</ul>",
+    skills: [
+      "Accounting",
+      "Tutoring",
+      "Leadership",
+      "Communication",
+      "Teamwork",
+      "Problem Solving",
+      "Time Management",
+    ],
   },
 
   {
@@ -165,11 +192,19 @@ const experiences = [
     company: "Republic of Korea Army",
     period: "2020.04 ~ 2021.10",
     location: "Yeosu, South Korea",
-    desc: "<ul>" + 
-            "<li>Served as a Sergeant Squad Leader in the South Sea Coast Guard.</li>" +
-            "<li>Successfully commanded and managed the squad after completing the 10 days of leadership training.</li>" +
-            "</ul>",
-    skills: ["Leadership", "Communication", "Teamwork", "Problem Solving", "Time Management", "Adaptability"]
+    desc:
+      "<ul>" +
+      "<li>Served as a Sergeant Squad Leader in the South Sea Coast Guard.</li>" +
+      "<li>Successfully commanded and managed the squad after completing the 10 days of leadership training.</li>" +
+      "</ul>",
+    skills: [
+      "Leadership",
+      "Communication",
+      "Teamwork",
+      "Problem Solving",
+      "Time Management",
+      "Adaptability",
+    ],
   },
 ];
 
@@ -186,7 +221,10 @@ export default function Experience() {
                 <Position>{exp.position}</Position>
                 <Company>{exp.company}</Company>
                 <Period>{exp.period}</Period>
-                <Location><FaMapMarkerAlt style={{marginRight: 4}} />{exp.location}</Location>
+                <Location>
+                  <FaMapMarkerAlt style={{ marginRight: 4 }} />
+                  {exp.location}
+                </Location>
                 <Desc dangerouslySetInnerHTML={{ __html: exp.desc }} />
                 <Skills>
                   {exp.skills.map((skill, i) => (
