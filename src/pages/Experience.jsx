@@ -133,10 +133,14 @@ const experiences = [
       "<li>Funded by OpenAI, developed an AI-powered, user-personalized RPG by utilizing OpenAI APIs and Pinecone Vector Database for dynamic, context-aware gameplay.</li>" +
       "<li>Implemented real-time NPC interactions by integrating conversational AI and embedding player intent for adaptive gameplay.</li>" +
       "<li>Leveraged generative image models to create real-time, user-tailored maps on demand, storing them in AWS for scalable access, while maintaining gameplay continuity via contextual embeddings.</li>" +
+      "<br />" +
+      "GitHub Link: <a href='https://github.com/HelloPyunny/SAIL'>https://github.com/HelloPyunny/SAIL</a>" +
       "</ul>",
     skills: [
       "AI",
       "Conversational AI",
+      "Embedding",
+      "Prompt Engineering",
       "Generative Image Models",
       "AWS",
       "Pinecone Vector Database",
