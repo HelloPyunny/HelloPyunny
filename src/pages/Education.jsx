@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import uwmadisonLogo from "../assets/uwmadisonLogo.png";
 import uwoLogo from "../assets/uwo.png";
+import JoongDongHighSchoolLogo from "../assets/JoongDongLogo.png";
 
 const Container = styled.div`
   min-height: 100vh;
@@ -104,6 +105,12 @@ const schools = [
     logo: uwoLogo,
     name: "University of Wisconsin-Oshkosh",
     period: "2022.01 ~ 2023.05 | Transferred",
+    desc: "",
+  },
+  {
+    logo: JoongDongHighSchoolLogo,
+    name: "JoongDong High School",
+    period: "2015.03 ~ 2018.02",
     desc: "",
   },
 ];
