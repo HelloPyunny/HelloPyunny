@@ -217,6 +217,9 @@ export default function Education() {
                 <CourseworkItem>CS 540 | Artificial Intelligence</CourseworkItem>
                 <CourseworkItem>CS 539 | Neural Networks</CourseworkItem>
                 <CourseworkItem>STAT 451 | Statistical Methods in Machine Learning</CourseworkItem>
+                <CourseworkItem>CS 566 | Computer Vision</CourseworkItem>
+                <CourseworkItem>CS 407 | Mobile Systems and Applications</CourseworkItem>
+                <CourseworkItem>MATH 311 | Probability Theory</CourseworkItem>
                 <CourseworkItem>STAT 333 | Applied Regression Analysis</CourseworkItem>
                 <CourseworkItem>MATH 340 | Linear Algebra</CourseworkItem>
                 <CourseworkItem>MATH 234 | Multi-Variable Calculus</CourseworkItem>
@@ -227,11 +230,7 @@ export default function Education() {
             <CourseworkColumn>
               <ColumnTitle>Intended Courses</ColumnTitle>
               <CourseworkList>
-                <CourseworkItem>CS 532 | Matrix Methods in Machine Learning</CourseworkItem>
                 <CourseworkItem>CS 544 | Big Data Systems</CourseworkItem>
-                <CourseworkItem>CS 566 | Computer Vision</CourseworkItem>
-                <CourseworkItem>CS 407 | Mobile Systems and Applications</CourseworkItem>
-                <CourseworkItem>MATH 311 | Probability Theory</CourseworkItem>
               </CourseworkList>
             </CourseworkColumn>
           </CourseworkContainer>
