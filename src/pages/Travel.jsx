@@ -265,7 +265,7 @@ export default function Travel() {
       <ContentWrapper>
         <Title>Travel</Title>
         <Description>
-          I love exploring new places and experiencing different cultures. Here are some of the countries and cities I've visited so far.
+          {/* I love exploring new places and experiencing different cultures. Here are some of the countries and cities I've visited so far. */}
         </Description>
         {Object.entries(countriesByContinent).map(([continent, countries]) => (
           <ContinentSection key={continent}>
