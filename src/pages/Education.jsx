@@ -228,9 +228,9 @@ export default function Education() {
             </CourseworkColumn>
 
             <CourseworkColumn>
-              <ColumnTitle>Intended Courses</ColumnTitle>
+              <ColumnTitle>Current Courses</ColumnTitle>
               <CourseworkList>
-                <CourseworkItem>CS 544 | Big Data Systems</CourseworkItem>
+                <CourseworkItem>CS 506 | Software Engineering</CourseworkItem>
               </CourseworkList>
             </CourseworkColumn>
           </CourseworkContainer>
