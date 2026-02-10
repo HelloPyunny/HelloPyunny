@@ -195,7 +195,7 @@ export default function Travel() {
     {
         name: "Canada",
         flag: "https://flagcdn.com/w80/ca.png",
-        cities: ["Toronto", "Vancouver", "Montreal", "Quebec City", "Niagara Falls"],
+        cities: ["Toronto", "Vancouver", "Montreal", "Quebec City", "Niagara Falls", "Banff", "Calgary"],
         continent: "North America"
     },
     // Europe
