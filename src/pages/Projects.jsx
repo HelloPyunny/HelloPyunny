@@ -166,15 +166,47 @@ const ProjectLink = styled.a`
 
 const projects = [
   {
-    name: "Mad-K Website (Currently Working)",
-    periodOrPersonal: "2025.06 ~ Present",
+    name: "FitFlow",
+    periodOrPersonal: "2025.12 ~ Present",
     role: "Full Stack Developer",
-    short: "A website for Mad-K, a Korean Soccer team in UW-Madison",
-    detail: "I am currently working on the website for Mad-K, a Korean Soccer team in UW-Madison.",
-    //link: "/projects/mad-k",
+    short: "ML-driven fitness analytics platform",
+    detail: "FitFlow is an ML-driven fitness analytics platform that models training load and recovery from workout and condition data across longitudinal user activity histories.\n\n" +
+    "<strong>Contributions:</strong>\n" +
+    "<ul>" +
+    "<li> Designed and implemented an ML-driven fitness analytics platform that models training load and recovery from workout and condition data across longitudinal user activity histories</li>" +
+    "<li> Built backend prediction services estimating fatigue, success probability, and overtraining risk using statistical features and tree-based models under real-world data variability</li>" +
+    "<li> Engineered scalable data and ML pipelines for time-series training data, supporting model training, evaluation, and deployment workflows with reproducible experimentation and versioning</li>" +
+    "</ul>",
+    link: "https://github.com/HelloPyunny/FitFlow/",
     //image: project1Image,
-    stacks: ["React", "TypeScript", "Styled-Components"],
+    stacks: ["Python", "FastAPI", "React", "PostgreSQL", "SQLAlchemy", "Docker"],
   },
+  {
+    name: "FactSnap",
+    periodOrPersonal: "2025.09 ~ Present",
+    role: "Backend Developer",
+    short: "Location-based social media platform for sharing and discovering local events and activities",
+    detail: "FactSnap is a location-based social media platform for sharing and discovering local events and activities.\n\n" +
+    "<strong>Contributions:</strong>\n" +
+    "<ul>" +
+    "<li>Designed and implemented an ML-driven fitness analytics platform that models training load and recovery from workout and condition data across longitudinal user activity histories</li>" +
+    "<li>Implemented a type-safe database access layer using sqlc to generate Go code from SQL queries, eliminating runtime SQL errors and enforcing compile-time type safety</li>" +
+    "<li>Containerized the full-stack application with Docker and integrated AWS S3 for scalable media storage, reducing environment setup friction and ensuring deployment consistency</li>" +
+    "</ul>",
+    link: "https://github.com/HelloPyunny/CS407-FactSnap",
+    //image: project1Image,
+    stacks: ["Golang", "PostgreSQL", "Docker", "AWS", "React Native", "ChatGPT API"],
+  },
+  //{
+  //  name: "Mad-K Website (Currently Working)",
+  //  periodOrPersonal: "2025.06 ~ Present",
+  //  role: "Full Stack Developer",
+  //  short: "A website for Mad-K, a Korean Soccer team in UW-Madison",
+  //  detail: "I am currently working on the website for Mad-K, a Korean Soccer team in UW-Madison.",
+  //  //link: "/projects/mad-k",
+  //  //image: project1Image,
+  //  stacks: ["React", "TypeScript", "Styled-Components"],
+  //},
   {
     name: "Shop Splitter",
     periodOrPersonal: "Personal Project",
